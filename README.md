@@ -35,3 +35,9 @@ Start the server
 ```bash
   npm run start:dev
 ```
+
+Run tests
+
+```bash
+  npm run test
+```
