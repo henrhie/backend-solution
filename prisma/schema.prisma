@@ -1,0 +1,22 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Incident {
+  id    Int     @id @default(autoincrement())
+  client_id Int  @unique
+  incident_desc  String
+  city String
+  country String
+  weather_report Json
+  date DateTime  @default(now())
+}
+
